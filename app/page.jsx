@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/herosection";
 import FeaturesSection from "@/components/featuresSection";
+import FaqSection from "@/components/faqSection";
+
 
 export default function Home() {
   return (
@@ -10,6 +11,9 @@ export default function Home() {
       </section>
       <section className ="pb-10">
         <FeaturesSection />
+      </section>
+      <section className ="pb-10">
+        <FaqSection />
       </section>
     </main>
   );
