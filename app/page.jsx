@@ -16,9 +16,6 @@ export default function Home() {
       <section className ="pb-10">
         <FaqSection />
       </section>
-      <section className ="pb-10">
-        <Footer  />
-      </section>
     </main>
   );
 }
