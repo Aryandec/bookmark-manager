@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
-
+import HeroSection from "@/components/herosection";
 export default function Home() {
   return (
-    <main className="">
-      <h1> BookMark Library</h1>
-      <Button>Hello</Button>
+    <main>
+      <section className ="p-20">
+        <HeroSection />
+      </section>
     </main>
   );
 }
