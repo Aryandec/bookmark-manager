@@ -1,6 +1,7 @@
 import HeroSection from "@/components/herosection";
 import FeaturesSection from "@/components/featuresSection";
 import FaqSection from "@/components/faqSection";
+import Footer from "@/components/foooterSection";
 
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
       </section>
       <section className ="pb-10">
         <FaqSection />
+      </section>
+      <section className ="pb-10">
+        <Footer  />
       </section>
     </main>
   );
