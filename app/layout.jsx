@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/foooterSection";
 import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
         <ClerkProvider appearance={{ variables: { colorPrimary: "#fe5933"}}}>
         <Navbar />
         {children}
+        <Footer />
         </ClerkProvider>
       </body>
     </html>

@@ -1,16 +1,22 @@
 "use client";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Dashboard", href: "/dashboard" },
-];
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useUser } from "@clerk/nextjs";
 
 const NavItems = () => {
   const pathname = usePathname();
+  const { isSignedIn } = useUser(); // 👈 Clerk hook
+
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    {
+      label: "Dashboard",
+      href: isSignedIn ? "/dashboard" : "/sign-in", // 👈 Redirect based on auth state
+    },
+  ];
 
   return (
     <nav className="flex items-center gap-4">
@@ -18,7 +24,9 @@ const NavItems = () => {
         <Link
           href={href}
           key={label}
-          className={cn(pathname === href && "text-primary font-semibold")}
+          className={cn(
+            pathname === href && "text-primary font-semibold"
+          )}
         >
           {label}
         </Link>
