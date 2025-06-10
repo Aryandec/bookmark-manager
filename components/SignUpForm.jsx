@@ -35,7 +35,7 @@ export function SignUpForm() {
 
     const result = await signup(formData);
     if (result.success) {
-      setOpen(true);
+      setDialogOpen(true);
     } else {
       setFormError(result.message);
     }
