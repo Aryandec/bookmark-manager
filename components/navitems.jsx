@@ -16,9 +16,10 @@ const NavItems = () => {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     {
-      label: "Dashboard",
-      href: isSignedIn ? "/dashboard" : "/sign-in",
+      label: "Dashboard",href: "/dashboard",
+     /// href: isSignedIn ? "/dashboard" : "/sign-in",
     },
+    { label: "Sign In", href: "/sign-in" },
   ];
 
   return (
