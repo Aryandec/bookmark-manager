@@ -2,6 +2,7 @@ import HeroSection from "@/components/herosection";
 import FeaturesSection from "@/components/featuresSection";
 import FaqSection from "@/components/faqSection";
 import Footer from "@/components/foooterSection";
+import UserGreetText from "@/components/UserGreetText";
 
 
 export default function Home() {

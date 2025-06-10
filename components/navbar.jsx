@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaBookBookmark } from "react-icons/fa6";
 import NavItems from "./navitems";
+import  LoginButton  from "@/components/LogInLogOutButton"
 
 
 const Navbar = () => {
@@ -14,6 +15,7 @@ const Navbar = () => {
       </Link>
       <div className="flex items-center gap-8">
         <NavItems />
+        <LoginButton />
       </div>
     </nav>
   );

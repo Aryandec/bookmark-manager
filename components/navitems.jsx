@@ -1,8 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useUser } from "@clerk/nextjs";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { FaBars } from "react-icons/fa";
@@ -10,16 +10,12 @@ import { FaBookBookmark } from "react-icons/fa6";
 
 const NavItems = () => {
   const pathname = usePathname();
-  const { isSignedIn } = useUser();
+  const [open, setOpen] = useState(false);
 
   const links = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    {
-      label: "Dashboard",href: "/dashboard",
-     /// href: isSignedIn ? "/dashboard" : "/sign-in",
-    },
-    { label: "Sign In", href: "/sign-in" },
+    { label: "Dashboard", href: "/dashboard" },
   ];
 
   return (
@@ -43,7 +39,7 @@ const NavItems = () => {
 
       {/* Mobile Nav */}
       <div className="md:hidden">
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon">
               <FaBars />
