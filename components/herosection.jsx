@@ -15,9 +15,9 @@ const HeroSection = () => {
           articles or forgotten tabs.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/sign-in">
+            <Link href="/auth/signup">
               <Button className="w-full sm:w-auto rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500">
-                Sign in
+                Sign Up
               </Button>
             </Link>
 
